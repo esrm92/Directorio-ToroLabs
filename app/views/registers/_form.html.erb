@@ -1,0 +1,30 @@
+<h1 class="row center-xs">INGRESAR USUARIO NUEVO </h1>
+<%= form_for(@register) do |f| %>
+		<% @register.errors.full_messages.each do |message| %>
+		<div class="be-red white top-space">
+			*<%=message%>			
+		</div>
+		<%end%>
+
+
+		<div class="field" >
+			<%=f.text_field :nombre, placeholder:"Nombre", class:"form-control"%>
+		</div>
+
+		 <div class="field">
+			<%=f.text_field :telefono, placeholder:"telefono", class:"form-control" %>
+		</div>
+
+		<div class="field">
+			<%=f.text_field :celular, placeholder:"celular", class:"form-control" %>
+		</div>
+
+		<div class="field">
+			<%=f.text_field :email, placeholder:"email",  class:"form-control" %>
+		</div>
+
+		<div class="field row center-xs">
+			<%=f.submit "ALMACENAR EN EL DIRECTORIO", class:"btn be-red white large-padding row center-xs"%>
+		</div>
+
+	<%end%>
